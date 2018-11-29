@@ -266,8 +266,8 @@ def main():
     while invalidUsername:
         name = input("Choose a username: ")
         name.replace("\n", "")
-        if " " in name or "#" in name or "#RM#" in name or "#RMS#" in name:
-            print("Username cannot contain spaces or # characters.")
+        if " " in name or "#" in name or "#RM#" in name or "#RMS#" in name or len(name) > 31:
+            print("Username cannot contain spaces or # characters and must not be more than 31 characters.")
         else:
             invalidUsername = False
         #if
